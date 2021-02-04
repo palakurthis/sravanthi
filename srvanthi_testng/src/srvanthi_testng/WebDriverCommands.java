@@ -30,7 +30,7 @@ public void TC1() throws InterruptedException,AssertionError  {
 	WebElement passwd=driver.findElement(By.xpath("//input[@name='txtPassword']"));
 	WebElement login=driver.findElement(By.xpath("//input[@value='LOGIN']"));
 		//WebElement commands
-	userid.sendKeys("admin");
+	userid.sendKeys("Admin");
 	passwd.sendKeys("admin123");
 	login.click();
 	String titl=driver.getTitle();
@@ -79,6 +79,7 @@ public void TC1() throws InterruptedException,AssertionError  {
 	int lstn=lst.size();
 	for(int i=0;i<lstn;i++) {
 		String display=lst.get(i).getText();
+		sl.selectByIndex(0);
 		System.out.println(display);
 	}
 	for(int i=0;i<linkn;i++) {

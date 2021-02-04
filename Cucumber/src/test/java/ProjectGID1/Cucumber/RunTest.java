@@ -20,11 +20,11 @@ import cucumber.api.CucumberOptions;
            )
 	public class RunTest {
 		
-//		@AfterClass
-//	    public static void writeExtentReport() {
-//	        Reporter.loadXMLConfig(new File("config/config.xml"));
-//	    
-		//}
+	@AfterClass
+    public static void writeExtentReport() {
+      Reporter.loadXMLConfig(new File("config/config.xml"));
+   
+		}
 
 	}
 	//,glue={"loginTest"})

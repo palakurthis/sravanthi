@@ -3,11 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="srvanthi_testng.WebDriverCommands">
+      <class name="pageObjectModel.Handlecalender">
         <methods>
-          <include name="TC1"/>
+          <include name="login"/>
+          <include name="handlecalender"/>
         </methods>
-      </class> <!-- srvanthi_testng.WebDriverCommands -->
+      </class> <!-- pageObjectModel.Handlecalender -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

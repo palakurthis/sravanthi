@@ -6,7 +6,8 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="srvanthi_testng.WebDriverCommands"/>
-      
+     <class name="srvanthi_testng.Locators"/> 
+      <class name="srvanthi_testng.Testarray"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

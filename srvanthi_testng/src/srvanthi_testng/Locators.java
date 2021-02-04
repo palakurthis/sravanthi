@@ -3,7 +3,7 @@ package srvanthi_testng;
 import java.io.File;
 import java.io.IOException;
 
-import org.openqa.selenium.Alert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -22,7 +22,7 @@ public class Locators {
 	String Buildpath="https://opensource-demo.orangehrmlive.com/index.php/dashboard";
 	WebDriver driver;
 		//@Parameters ({"admin","admin123"})
-	@BeforeMethod
+	@BeforeMethod(groups="login")
 	public void login() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "D:\\Selinium Web Driver\\drivers\\chromedriver.exe");
 		 driver=new ChromeDriver();
@@ -35,12 +35,12 @@ public class Locators {
 		WebElement passwd=driver.findElement(By.xpath("//input[@name='txtPassword']"));
 		WebElement login=driver.findElement(By.xpath("//input[@value='LOGIN']"));
 			//WebElement commands
-		userid.sendKeys("admin");
+		userid.sendKeys("Admin");
 		passwd.sendKeys("admin123");
 		login.click();
 	}
 	
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void xpath() throws InterruptedException, AssertionError, IOException {
 		//using locator as xpath and writing xpath in different ways
 		WebElement time=driver.findElement(By.xpath("//a[@id='menu_time_viewTimeModule']"));
@@ -87,7 +87,8 @@ Thread.sleep(1000);
     WebElement save= driver.findElement(By.cssSelector("#btnSave"));
     save.click();
 //Alert alr =(Alert)driver;
-
-
 }	
+
+
+
 }
